@@ -1,12 +1,11 @@
 <resources>
 
-    <string name="app_name">Alert</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">News Alerts</string>  
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="main_no_items">No orders to display</string>
+    <string name="title_activity_main">News Alerts</string>
+    <string name="main_no_items">No News to display</string>
 
-    <color name="read">#F8F8F8 </color>
+    <color name="read">#DCDCDC </color>
     <color name="unRead">#FFFFFF</color>
     <color name="textColor">#000000</color>
 
