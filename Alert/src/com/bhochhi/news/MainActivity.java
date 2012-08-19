@@ -79,10 +79,14 @@ public class MainActivity extends ListActivity {
 				TextView tt = (TextView) v.findViewById(R.id.titleText);
 				if (tt != null) {
 
-					if (n.isRead)
-						tt.setBackgroundColor(R.color.read);
-					else
-						tt.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+					if (n.isRead) {
+						tt.setTypeface(Typeface.DEFAULT);
+						v.setBackgroundColor(R.color.read);
+					} else {
+						tt.setTypeface(Typeface.DEFAULT_BOLD);
+						v.setBackgroundColor(R.color.unRead);
+					}
+
 					tt.setText(n.getTitle());
 				}
 
