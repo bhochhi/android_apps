@@ -1,6 +1,5 @@
 package com.bhochhi.news;
 
-import java.util.Date;
 
 public class News {
 
@@ -8,7 +7,6 @@ public class News {
 	public Boolean isRead;
 	private String description;
 	private String source;
-	private Date datetime;
 	
 	
 	public News(){
@@ -38,11 +36,10 @@ public class News {
 	public void setSource(String source) {
 		this.source = source;
 	}
-	public Date getDatetime() {
-		return datetime;
-	}
-	public void setDatetime(Date datetime) {
-		this.datetime = datetime;
+	
+	@Override 
+	public String toString(){
+		return title;
 	}
 	
 	
