@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Todos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Todos</string>
+    <string name="no_todos">Currently there are no Todo items maintained</string>
+</resources>

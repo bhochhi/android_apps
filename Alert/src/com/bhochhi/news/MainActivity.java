@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.bhochhi.todos.R;
+
+
 public class MainActivity extends ListActivity {
 
 	private NewsAdaper nAdapter;
@@ -32,31 +35,33 @@ public class MainActivity extends ListActivity {
 		ArrayList<News> newsL = new ArrayList<News>();
 		dataSource = new NewsDataSource(context);
 		dataSource.open();
-		dataSource.deleteAll();	
-	
-			dataSource
-					.insertNews("Title 1", "dwewewedadf", "source 1", "false");
-			dataSource
-					.insertNews("Title 2", "dwewewedadf", "source 2", "false");
-			dataSource
-					.insertNews("Title 3", "dwewewedadf", "source 3", "true");
-			dataSource
-					.insertNews("Title 4", "dwewewedadf", "source 4", "true");
-			dataSource
-					.insertNews("Title 5", "dwewewedadf", "source 5", "true");
-			dataSource
-					.insertNews("Title 6", "dwewewedadf", "source 6", "false");
-			dataSource
-					.insertNews("Title 7", "dwewewedadf", "source 7", "false");
-			dataSource.insertNews("Title 8", "dwewewedadf", "source8", "false");
-			dataSource
-					.insertNews("Title 9", "dwewewedadf", "source 9", "false");
-			dataSource.insertNews("Title 10", "dwewewedadf", "source 10",
-					"false");
-			dataSource.insertNews("Title 11", "dwewewedadf", "source 11",
-					"false");
-			newsL = dataSource.getAllNews();	
-	
+		dataSource.deleteAll();
+
+		dataSource.insertNews("Title 1", "dwewewedadf", "source 1", "false");
+		dataSource.insertNews("Title 2", "dwewewedadf", "source 2", "false");
+		dataSource.insertNews("Title 3", "dwewewedadf", "source 3", "true");
+		dataSource.insertNews("Title 4", "dwewewedadf", "source 4", "true");
+		dataSource.insertNews("Title 5", "dwewewedadf", "source 5", "true");
+		dataSource.insertNews("Title 6", "dwewewedadf", "source 6", "false");
+		dataSource.insertNews("Title 7", "dwewewedadf", "source 7", "true");
+		dataSource.insertNews("Title 8", "dwewewedadf", "source8", "true");
+		dataSource.insertNews("Title 9", "dwewewedadf", "source 9", "true");
+		dataSource.insertNews("Title 10", "dwewewedadf", "source 10", "true");
+		dataSource.insertNews("Title 11", "dwewewedadf", "source 11", "true");
+		dataSource.insertNews("Title 62 long one to see the ellipse so more long loooooooonnnnnnnng","dwewewedadf", "source 6", "false");
+		dataSource.insertNews("Title 7", "dwewewedadf", "source 7", "true");
+		dataSource.insertNews("Title 8", "dwewewedadf", "source8", "true");
+		dataSource.insertNews("Title 9", "dwewewedadf", "source 9", "true");
+		dataSource.insertNews("Title 10", "dwewewedadf", "source 10", "true");
+		dataSource.insertNews("Title 11", "dwewewedadf", "source 11", "true");
+		dataSource.insertNews("Title 63", "dwewewedadf", "source 6", "false");
+		dataSource.insertNews("Title3 7", "dwewewedadf", "source 7", "true");
+		dataSource.insertNews("Title 28", "dwewewedadf", "source8", "true");
+		dataSource.insertNews("Title 29", "dwewewedadf", "source 9", "true");
+		dataSource.insertNews("Title 310", "dwewewedadf", "source 10", "true");
+		dataSource.insertNews("Title 1323", "dwewewedadf", "source 11", "false");
+		newsL = dataSource.getAllNews();
+
 		return newsL;
 	}
 
@@ -84,10 +89,9 @@ public class MainActivity extends ListActivity {
 
 					if (n.isRead) {
 						tt.setTypeface(Typeface.DEFAULT);
-					//	v.setBackgroundColor(R.color.read);
+						// v.setBackgroundColor(R.color.read);
 					} else {
 						tt.setTypeface(Typeface.DEFAULT_BOLD);
-						v.setBackgroundColor(R.color.unRead);
 					}
 
 					tt.setText(n.getTitle());
