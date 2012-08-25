@@ -20,6 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TodoDetailActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <provider
+            android:name=".contentprovider.MyTodoContentProvider"
+            android:authorities="com.bhochhi.todos.contentprovider" >
+        </provider>
     </application>
 
 </manifest>
