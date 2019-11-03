@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <ImageView
         android:id="@+id/banner"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:contentDescription="banner"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
+        android:contentDescription="main logo"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,10 +43,49 @@
         />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="7dp"
-        android:layout_height="15dp"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="320dp" />
+        android:id="@+id/camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="24dp"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/fav"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/camerabutton" />
+
+    <ImageView
+        android:id="@+id/fav"
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="fav"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/camera"
+        app:layout_constraintEnd_toStartOf="@+id/inbox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/camera"
+        app:layout_constraintTop_toTopOf="@+id/camera"
+        app:srcCompat="@drawable/favoritebutton" />
+
+    <ImageView
+        android:id="@+id/inbox"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="inbox"
+
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/fav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fav"
+        app:layout_constraintTop_toTopOf="@+id/fav"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/inboxbutton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
